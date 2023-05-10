@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bus Ticket</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+		$(function() {
+			$("#datepicker").datepicker({
+				dateFormat: "yy-mm-dd"
+			});
+		});
+	</script>
+    <style>
+		body {
+		  background-color: #f2f2f2;
+		  font-family: Arial, sans-serif;
+		  padding: 20px;
+		}
+
+		h1 {
+		  color: #007bff;
+		}
+
+		form {
+		  background-color: white;
+		  border-radius: 10px;
+		  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+		  padding: 20px;
+		}
+
+		label {
+		  display: block;
+		  font-weight: bold;
+		  margin-bottom: 10px;
+		}
+
+		input[type="text"] {
+		  border: 2px solid #ced4da;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		  font-size: 16px;
+		  padding: 10px;
+		  width: 100%;
+		}
+
+		button[type="submit"] {
+		  background-color: #007bff;
+		  border: none;
+		  border-radius: 4px;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 16px;
+		  margin-top: 20px;
+		  padding: 10px;
+		  transition: background-color 0.2s ease-in-out;
+		}
+
+		button[type="submit"]:hover {
+		  background-color: #0069d9;
+		}
+
+		input[type="text"] {
+            width: 250px;
+        }
+	</style>
+</head>
+<body>
+<h1>Bus Ticket</h1>
+<form action="receive" method="post">
+    <label for="datepicker">Date:</label>
+    <input type="text" id="datepicker" name="datepicker" required>
+    <br><br>
+    <label for="ticketCode">Ticket Code:</label>
+    <input type="text" id="ticketCode" name="ticketCode" required>
+    <br><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="from">From :</label>
+    <input type="text" id="from" name="from" required>
+    <label for="to">To:</label>
+    <input type="text" id="to" name="to" required>
+    <br><br>
+    <label for="fare">Fare(Taka):</label>
+    <input type="text" id="fare" name="fare" required>
+    <br><br>
+    <script>
+			$("#datepicker").on("click", function() {
+				$("#datepicker").datepicker("show");
+			});
+	</script>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

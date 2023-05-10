@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Ticket booking </title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+p {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+    </style>
+</head>
+<body>
+<h1>Ticket Owner Detail</h1>
+<label for="datepicker" style="display: inline-block;">Date:</label>
+<p th:text="${datepicker}" id="datepicker" style="display: inline-block;"></p>,<br>
+<label for="ticketCode" style="display: inline-block;">Ticket Code:</label>
+<p th:text="${ticketCode}" id="ticketCode" style="display: inline-block;"></p><br>
+<label for="name" style="display: inline-block;">Name:</label>
+<p th:text="${name}" id="name" style="display: inline-block;"></p><br>
+<label for="from" style="display: inline-block; ">From:</label>
+<p th:text="${from}" id="from" style="display: inline-block;"></p>
+<label for="to" style="display: inline-block; ">To:</label>
+<p th:text="${to}" id="to" style="display: inline-block;"></p><br>
+<label for="fare" style="display: inline-block;">Fare(Taka):</label>
+<p th:text="${fare}" id="fare" style="display: inline-block;"></p><br>
+</body>
+
+</html>
